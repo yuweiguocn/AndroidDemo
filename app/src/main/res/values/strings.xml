@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Android Demo</string>
+    <string name="activity_shape_drawable">Shape Drawable</string>
+    <string name="shape_drawable">Shape Drawable</string>
+    <string name="bg_gradient">渐变圆角背景</string>
+    <string name="bg_solid">纯色圆角背景</string>
+    <string name="bg_solid_hollow">空心圆角背景</string>
+    <string name="bg_stroke">描边实线圆角背景</string>
+    <string name="bg_stroke_dash">描边虚线圆角背景</string>
+    <string name="bg_oval">椭圆背景</string>
+
+    <string name="about">about</string>
+    <string name="activity_about">About</string>
+    <string name="contact_me">Contact me</string>
+</resources>

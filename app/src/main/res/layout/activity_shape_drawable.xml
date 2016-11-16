@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/view_toolbar"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="io.github.yuweiguocn.demo.MainActivity">
+
+        <TextView
+            style="@style/ShapeText"
+            android:background="@drawable/shape_rectangle_gradient"
+            android:text="@string/bg_gradient"/>
+
+        <TextView
+            style="@style/ShapeText"
+            android:background="@drawable/shape_rectangle_solid"
+            android:text="@string/bg_solid"/>
+
+        <TextView
+            style="@style/ShapeText"
+            android:background="@drawable/shape_rectangle_solid_hollow"
+            android:text="@string/bg_solid_hollow"/>
+
+        <TextView
+            style="@style/ShapeText"
+            android:background="@drawable/shape_rectangle_stroke"
+            android:text="@string/bg_stroke"/>
+
+        <TextView
+            style="@style/ShapeText"
+            android:background="@drawable/shape_rectangle_stroke_dash"
+            android:text="@string/bg_stroke_dash"/>
+
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:background="@drawable/shape_oval_solid"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:layout_width="30dp"
+            android:background="@drawable/shape_oval_solid"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:background="@drawable/shape_oval_gradient_radial"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:background="@drawable/shape_oval_gradient_linear"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:background="@drawable/shape_oval_gradient_sweep"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:background="@drawable/shape_oval_stroke"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:background="@drawable/shape_oval_stroke_dash"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_line"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_line_dash"
+            android:layerType="software"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:background="@drawable/shape_ring_solid"/>
+
+        <ImageView
+            style="@style/ShapeImg"
+            android:background="@drawable/shape_ring_gradient"/>
+
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>
+</layout>
