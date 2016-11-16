@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             List<Map<String, Object>> myData = new ArrayList<Map<String, Object>>();
 
             Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-            mainIntent.addCategory(Intent.CATEGORY_SAMPLE_CODE);
+            mainIntent.addCategory("android.intent.category.DEMO");
 
             PackageManager pm = mContext.getPackageManager();
             List<ResolveInfo> list = pm.queryIntentActivities(mainIntent, 0);
