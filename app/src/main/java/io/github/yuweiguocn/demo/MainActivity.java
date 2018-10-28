@@ -59,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
         private Context mContext;
 
+        public MainFragment() {
+            mContext = getActivity();
+        }
+
         public MainFragment(Context mContext) {
             this.mContext = mContext;
         }
@@ -66,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setListAdapter(new SimpleAdapter(mContext, getData(),
+            setListAdapter(new SimpleAdapter(getActivity(), getData(),
                     android.R.layout.simple_list_item_1, new String[] { "title" },
                     new int[] { android.R.id.text1 }));
         }
@@ -77,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
             mainIntent.addCategory("android.intent.category.DEMO");
 
-            PackageManager pm = mContext.getPackageManager();
+            PackageManager pm = getActivity().getPackageManager();
             List<ResolveInfo> list = pm.queryIntentActivities(mainIntent, 0);
 
             if (null == list)
