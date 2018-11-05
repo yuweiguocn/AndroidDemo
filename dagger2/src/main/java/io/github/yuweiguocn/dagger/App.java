@@ -6,18 +6,12 @@ import android.app.Application;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
-import javax.inject.Inject;
-
 import dagger.android.AndroidInjector;
-import dagger.android.DispatchingAndroidInjector;
-import dagger.android.HasActivityInjector;
+import dagger.android.DaggerApplication;
 import io.github.yuweiguocn.dagger.di.DaggerAppComponent;
 import io.github.yuweiguocn.dagger.utils.SPUtil;
 
-public class App extends Application implements HasActivityInjector {
-
-    @Inject
-    DispatchingAndroidInjector<Activity> dispatchingActivityInjector;
+public class App extends DaggerApplication {
 
     private static App app;
     private SPUtil spUtil;
@@ -28,7 +22,11 @@ public class App extends Application implements HasActivityInjector {
         app = this;
         spUtil=new SPUtil(this,"dagger2");
         Logger.addLogAdapter(new AndroidLogAdapter());
-        DaggerAppComponent.create().inject(this);
+    }
+
+    @Override
+    protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
+        return DaggerAppComponent.create();
     }
 
     public SPUtil getSpUtil() {
@@ -39,8 +37,4 @@ public class App extends Application implements HasActivityInjector {
         return app;
     }
 
-    @Override
-    public AndroidInjector<Activity> activityInjector() {
-        return dispatchingActivityInjector;
-    }
 }
